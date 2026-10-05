@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Kit Consultório Nutri"
+description = "Landing page de vendas responsiva para o Kit Consultório Nutri, um pacote digital de modelos editáveis para nutricionistas."
+version = "1.0.0"
+id = "artifacts/kit-consultorio-nutri"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21810
+
+[services.development]
+run = "pnpm --filter @workspace/kit-consultorio-nutri run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kit-consultorio-nutri", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/kit-consultorio-nutri/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21810"
+BASE_PATH = "/"

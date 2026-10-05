@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1877F2">
+  <title>Kit Consultório Nutri — Entre na consulta com o recurso certo</title>
+  <meta name="description" content="+200 modelos editáveis para nutricionistas conduzirem atendimentos com mais clareza, agilidade e padrão profissional.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="Kit Consultório Nutri — Entre na consulta com o recurso certo">
+  <meta property="og:description" content="+200 modelos editáveis para nutricionistas conduzirem atendimentos com mais clareza, agilidade e padrão profissional.">
+  <meta property="og:image" content="imagens/mockup-kit.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kit Consultório Nutri">
+  <meta name="twitter:description" content="+200 modelos para um atendimento mais claro, ágil e profissional.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%231877F2'/%3E%3Cpath d='M30 48c-11-6-15-17-11-27 10 1 16 7 16 16 4-10 10-15 19-16 1 11-5 21-17 27' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: light;
+      --feed: #f0f2f5;
+      --paper: #fff;
+      --blue: #1877f2;
+      --blue-deep: #1264d5;
+      --green: #31a24c;
+      --green-deep: #237d39;
+      --health: #2e7d32;
+      --ink: #1c1e21;
+      --muted: #65676b;
+      --line: #e4e6eb;
+      --soft-green: #eef6ed;
+      --shadow: 0 1px 3px rgba(0,0,0,.12);
+      --shadow-card: 0 7px 22px rgba(30,52,40,.07);
+      --radius: 14px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body { margin: 0; background: var(--feed); color: var(--ink); font: 16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; }
+    button, a { font: inherit; }
+    button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid #ffbf47; outline-offset: 3px; }
+    a { color: inherit; }
+    .skip-link { position: fixed; left: 12px; top: 8px; z-index: 1001; transform: translateY(-160%); padding: 10px 14px; background: #fff; border-radius: 8px; color: var(--ink); }
+    .skip-link:focus { transform: none; }
+    .topbar { position: sticky; z-index: 50; top: 0; color: #fff; background: var(--blue); box-shadow: 0 2px 8px rgba(13,71,161,.22); }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: min(100% - 28px, 1040px); min-height: 58px; margin: auto; }
+    .brand { display: flex; align-items: center; gap: 9px; min-width: 0; font-weight: 800; letter-spacing: -.025em; }
+    .brand-mark { display: grid; place-items: center; width: 32px; height: 32px; flex: 0 0 auto; border: 1px solid rgba(255,255,255,.45); border-radius: 11px; background: rgba(255,255,255,.16); }
+    .brand-mark svg { width: 20px; height: 20px; }
+    .top-cta { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 7px 15px; border-radius: 999px; background: #fff; color: var(--blue-deep); text-decoration: none; font-size: .89rem; font-weight: 800; white-space: nowrap; transition: transform .2s, background .2s; }
+    .top-cta:hover { transform: translateY(-1px); background: #edf4ff; }
+    .urgency { background: #145fce; text-align: center; color: white; padding: 7px 14px; font-size: .82rem; font-weight: 750; letter-spacing: .01em; }
+    .urgency strong { font-variant-numeric: tabular-nums; letter-spacing: .09em; }
+    main { width: min(100% - 20px, 680px); margin: 12px auto 60px; }
+    .post { position: relative; margin-bottom: 12px; padding: 18px; overflow: hidden; border: 1px solid rgba(255,255,255,.8); border-radius: var(--radius); background: var(--paper); box-shadow: var(--shadow); }
+    .post-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .avatar { display: grid; place-items: center; width: 42px; height: 42px; flex: 0 0 auto; border: 2px solid #eaf3e8; border-radius: 50%; background: linear-gradient(145deg,#ecf6e9,#d9edda); color: var(--health); font-size: .91rem; font-weight: 850; }
+    .avatar svg { width: 23px; height: 23px; }
+    .poster-name { display: flex; align-items: center; gap: 5px; font-size: .91rem; line-height: 1.2; font-weight: 760; }
+    .verified { display: inline-flex; color: var(--blue); }
+    .verified svg { width: 15px; height: 15px; }
+    .post-meta { display: flex; align-items: center; gap: 4px; margin-top: 3px; color: var(--muted); font-size: .75rem; }
+    .post-meta svg { width: 13px; height: 13px; }
+    .post-copy { margin: 0 0 15px; font-size: .98rem; }
+    .post-copy p { margin: 0 0 10px; }
+    .post-copy p:last-child { margin-bottom: 0; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 7px; margin: 0 0 11px; padding: 6px 10px; border: 1px solid #dcebdd; border-radius: 999px; background: var(--soft-green); color: #28652d; font-size: .75rem; font-weight: 800; letter-spacing: .025em; }
+    .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
+    h1,h2,h3,p { overflow-wrap: anywhere; }
+    h1,h2,h3 { margin-top: 0; line-height: 1.14; letter-spacing: -.035em; }
+    h1 { margin-bottom: 10px; font-size: clamp(2rem, 7vw, 3.25rem); line-height: 1.04; }
+    h2 { margin-bottom: 11px; font-size: clamp(1.55rem, 5vw, 2.12rem); }
+    h3 { margin-bottom: 7px; font-size: 1.05rem; }
+    .hero-copy { margin-bottom: 16px; color: #41454b; font-size: 1.03rem; }
+    .hero-media { position: relative; overflow: hidden; border-radius: 13px; background: linear-gradient(135deg,#e8f1e4,#d7e8d4 48%,#f7eee4); }
+    .hero-photo { width: 100%; aspect-ratio: 1.12/1; object-fit: cover; object-position: 58% 43%; }
+    .hero-caption { position: absolute; right: 12px; bottom: 12px; left: 12px; display: flex; align-items: center; gap: 9px; width: fit-content; max-width: calc(100% - 24px); padding: 9px 12px; border: 1px solid rgba(255,255,255,.8); border-radius: 12px; background: rgba(255,255,255,.93); box-shadow: 0 4px 14px rgba(32,56,43,.12); font-size: .77rem; font-weight: 750; backdrop-filter: blur(8px); }
+    .caption-icon { display: grid; place-items: center; width: 29px; height: 29px; border-radius: 9px; background: #e7f3e4; color: var(--health); }
+    .caption-icon svg { width: 17px; height: 17px; }
+    .mockup-frame { position: relative; margin: 15px 0 14px; overflow: hidden; border: 1px solid #e2e9e1; border-radius: 13px; background: linear-gradient(140deg,#e8efe7,#f8f4eb); }
+    .mockup-img { width: 100%; aspect-ratio: 1.43/1; object-fit: cover; }
+    .mockup-label { position: absolute; right: 10px; bottom: 10px; padding: 6px 9px; border-radius: 9px; background: rgba(255,255,255,.94); color: #35573b; font-size: .7rem; font-weight: 760; box-shadow: 0 2px 7px rgba(0,0,0,.1); }
+    .check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 8px; margin: 14px 0; }
+    .check-item { display: flex; gap: 7px; align-items: flex-start; font-size: .82rem; line-height: 1.35; color: #45484d; }
+    .checkmark { display: grid; place-items: center; flex: 0 0 18px; width: 18px; height: 18px; margin-top: 1px; border-radius: 50%; background: #e8f5e8; color: #287b37; font-size: .72rem; font-weight: 900; }
+    .cta { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 52px; width: 100%; padding: 13px 18px; border: 0; border-radius: 11px; background: linear-gradient(180deg,#39ae56,#2e9948); box-shadow: 0 5px 12px rgba(49,162,76,.23), inset 0 1px rgba(255,255,255,.25); color: #fff; text-align: center; text-decoration: none; font-weight: 850; letter-spacing: .005em; cursor: pointer; transition: transform .18s, box-shadow .18s, filter .18s; animation: cta-pulse 3.4s ease-in-out infinite; }
+    .cta:hover { transform: translateY(-2px); filter: brightness(1.04); box-shadow: 0 8px 16px rgba(49,162,76,.3); }
+    .cta:active { transform: translateY(0); }
+    .cta svg { width: 20px; height: 20px; flex: 0 0 auto; }
+    @keyframes cta-pulse { 0%,100% { box-shadow: 0 5px 12px rgba(49,162,76,.23), inset 0 1px rgba(255,255,255,.25); } 50% { box-shadow: 0 6px 16px rgba(49,162,76,.34), inset 0 1px rgba(255,255,255,.25); } }
+    .cta-small { min-height: 46px; font-size: .94rem; }
+    .trust-line { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 12px; margin: 11px 0 0; color: #5e6661; font-size: .72rem; }
+    .trust-line span { display: inline-flex; align-items: center; gap: 4px; }
+    .trust-line svg { width: 14px; height: 14px; color: var(--health); }
+    .social-proof { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 12px 0 9px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .78rem; }
+    .reactions { display: inline-flex; align-items: center; gap: 5px; }
+    .reaction-badges { display: inline-flex; align-items: center; }
+    .reaction-badges span { display: grid; place-items: center; width: 20px; height: 20px; border: 2px solid #fff; border-radius: 50%; color: #fff; font-size: .63rem; line-height: 1; }
+    .reaction-badges span + span { margin-left: -5px; }
+    .reaction-like { background: #1877f2; }
+    .reaction-love { background: #f23e65; }
+    .social-actions { display: grid; grid-template-columns: repeat(3,1fr); padding-top: 5px; }
+    .social-action { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 38px; border: 0; border-radius: 7px; background: transparent; color: var(--muted); font-size: .8rem; font-weight: 700; cursor: pointer; transition: background .16s,color .16s; }
+    .social-action:hover { background: #f6f7f8; }
+    .social-action svg { width: 17px; height: 17px; }
+    .social-action.is-liked { color: var(--blue); }
+    .social-action.is-liked svg { fill: #e6f0ff; }
+    .floating-reaction { position: absolute; z-index: 2; pointer-events: none; color: #1877f2; font-size: 1.4rem; animation: float-up .9s ease-out forwards; }
+    @keyframes float-up { from { opacity: 1; transform: translateY(0) scale(.7) rotate(-9deg); } to { opacity: 0; transform: translateY(-72px) scale(1.2) rotate(10deg); } }
+    .soft-note { margin: 12px 0 0; color: var(--muted); font-size: .78rem; }
+    .steps { display: grid; gap: 9px; margin: 15px 0; }
+    .step { display: grid; grid-template-columns: 39px 1fr; align-items: start; gap: 11px; padding: 12px; border: 1px solid #edf0ed; border-radius: 11px; background: #fbfcfb; }
+    .step-number { display: grid; place-items: center; width: 37px; height: 37px; border-radius: 12px; background: #eaf4e7; color: #276d31; font-weight: 850; }
+    .step p { margin: 0; color: #53575a; font-size: .87rem; }
+    .video-placeholder { position: relative; display: grid; place-items: center; min-height: 210px; overflow: hidden; border: 1px solid #d8e4d8; border-radius: 13px; background: radial-gradient(ellipse at 70% 28%,rgba(255,255,255,.7),transparent 25%), linear-gradient(135deg,#dbe9d9,#eff2e8 60%,#d2e1d2); text-align: center; }
+    .video-placeholder::before,.video-placeholder::after { position: absolute; content: ""; border: 1px solid rgba(46,125,50,.12); border-radius: 50%; }
+    .video-placeholder::before { width: 230px; height: 230px; right: -55px; top: -105px; }
+    .video-placeholder::after { width: 170px; height: 170px; left: -76px; bottom: -100px; }
+    .video-inner { position: relative; z-index: 1; display: grid; justify-items: center; gap: 8px; }
+    .play-button { display: grid; place-items: center; width: 60px; height: 60px; border: 0; border-radius: 50%; background: var(--blue); color: #fff; box-shadow: 0 6px 18px rgba(24,119,242,.24); cursor: pointer; transition: transform .2s; }
+    .play-button:hover { transform: scale(1.06); }
+    .play-button svg { width: 23px; height: 23px; margin-left: 3px; }
+    .video-inner strong { font-size: .95rem; }
+    .video-inner span { color: #59635b; font-size: .77rem; }
+    .symptom-list { display: grid; gap: 8px; padding: 0; margin: 14px 0 0; list-style: none; }
+    .symptom-list li { display: grid; grid-template-columns: 24px 1fr; gap: 8px; align-items: start; padding: 9px 10px; border-radius: 9px; background: #fafbfa; color: #414449; font-size: .9rem; }
+    .cross { display: grid; place-items: center; width: 21px; height: 21px; border-radius: 50%; background: #fff0f0; color: #c54848; font-size: .75rem; font-weight: 900; }
+    .agitation { border-left: 4px solid #7ba66b; }
+    .agitation .lead { color: #46564a; font-size: .95rem; }
+    .quote-mark { color: #71a26a; font-size: 2rem; font-weight: 900; line-height: .8; }
+    .example-banner { display: flex; align-items: flex-start; gap: 9px; margin: 0 0 13px; padding: 10px 12px; border: 1px solid #f1d78b; border-radius: 10px; background: #fff9e8; color: #6b551e; font-size: .78rem; font-weight: 700; }
+    .example-banner svg { width: 18px; height: 18px; flex: 0 0 auto; }
+    .comments { display: grid; gap: 11px; }
+    .comment { display: grid; grid-template-columns: 36px 1fr; gap: 8px; align-items: start; }
+    .comment .avatar { width: 36px; height: 36px; font-size: .75rem; }
+    .comment-bubble { width: fit-content; max-width: 100%; padding: 9px 12px; border-radius: 4px 14px 14px 14px; background: #f0f2f5; }
+    .comment-bubble strong { display: block; margin-bottom: 3px; font-size: .84rem; }
+    .comment-bubble p { margin: 0; color: #393c40; font-size: .82rem; line-height: 1.4; }
+    .comment-actions { display: flex; gap: 7px; margin: 3px 0 0 11px; color: var(--muted); font-size: .68rem; font-weight: 650; }
+    .comment-like { color: #547fb6; }
+    .comment-mini-reactions { position: relative; display: inline-flex; align-items: center; gap: 3px; margin-left: auto; padding: 2px 6px; border-radius: 99px; background: white; color: var(--muted); box-shadow: 0 1px 3px rgba(0,0,0,.12); font-size: .68rem; }
+    .comment-mini-reactions span:first-child { color: #1877f2; }
+    .carousel { margin-top: 16px; padding-top: 13px; border-top: 1px solid var(--line); }
+    .carousel-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 9px; }
+    .carousel-head strong { font-size: .82rem; }
+    .carousel-buttons { display: flex; gap: 6px; }
+    .carousel-buttons button { display: grid; place-items: center; width: 31px; height: 31px; border: 1px solid #e2e6e2; border-radius: 50%; background: white; color: #405548; cursor: pointer; }
+    .carousel-buttons button:hover { background: #eff6ed; }
+    .carousel-track { display: flex; gap: 9px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; padding: 1px 1px 7px; }
+    .carousel-track img { width: min(82%,330px); flex: 0 0 min(82%,330px); aspect-ratio: 1.56; object-fit: cover; scroll-snap-align: start; border: 1px solid #e1e7e1; border-radius: 10px; }
+    .contents-card { padding: 15px; border: 1px solid #e4eae2; border-radius: 13px; background: linear-gradient(180deg,#fbfdfb,#f6faf5); }
+    .folder-label { display: inline-flex; align-items: center; gap: 7px; margin: 0 0 12px; padding: 6px 9px; border-radius: 8px; background: #e7f1e4; color: #37653a; font-size: .75rem; font-weight: 800; }
+    .folder-label svg { width: 15px; height: 15px; }
+    .included-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .included-list li { display: grid; grid-template-columns: 19px 1fr; gap: 7px; color: #42464a; font-size: .86rem; }
+    .included-list .checkmark { margin-top: 2px; }
+    .included-list strong { color: #27352a; }
+    .included-note { margin: 13px 0 0; padding: 11px; border-radius: 9px; background: #edf5eb; color: #3f5941; font-size: .81rem; font-weight: 650; }
+    .bonus-grid { display: grid; gap: 10px; margin-top: 13px; }
+    .bonus-card { position: relative; display: grid; grid-template-columns: 106px 1fr; min-height: 112px; overflow: hidden; border: 1px solid #e7e9e5; border-radius: 12px; background: #fff; }
+    .bonus-card img { width: 106px; height: 100%; min-height: 112px; object-fit: cover; background: #e8efe5; }
+    .bonus-info { padding: 12px 12px 10px; }
+    .bonus-label { display: inline-flex; margin-bottom: 5px; padding: 3px 7px; border-radius: 5px; background: #e5f4e5; color: #236f31; font-size: .64rem; font-weight: 900; letter-spacing: .06em; }
+    .bonus-info h3 { margin: 0 0 5px; font-size: .84rem; line-height: 1.25; letter-spacing: -.015em; }
+    .bonus-value { color: var(--muted); font-size: .73rem; }
+    .bonus-value s { margin-right: 5px; }
+    .anchor-list { margin: 12px 0; border: 1px solid #e7ebe7; border-radius: 11px; overflow: hidden; }
+    .anchor-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 10px 12px; border-bottom: 1px solid #edf0ed; color: #484d4a; font-size: .83rem; }
+    .anchor-row:last-child { border: 0; }
+    .anchor-row strong { white-space: nowrap; color: #313a33; }
+    .anchor-total { background: #f3f8f1; font-weight: 800; }
+    .anchor-total strong { color: var(--health); }
+    .anchor-caption { margin: 0; color: #565d57; font-size: .83rem; }
+    .price-card { position: relative; margin-top: 14px; padding: 21px 16px 17px; border: 1px solid #d7e7d4; border-radius: 15px; background: linear-gradient(180deg,#fbfef9 0%,#f2f8ef 100%); box-shadow: 0 8px 26px rgba(35,85,42,.1); }
+    .most-chosen { position: absolute; top: 0; right: 14px; transform: translateY(-50%); padding: 6px 10px; border-radius: 7px; background: var(--health); color: white; font-size: .66rem; font-weight: 900; letter-spacing: .08em; }
+    .old-price { margin: 0; color: #69716b; font-size: .88rem; }
+    .old-price s { font-weight: 750; }
+    .price-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px 9px; margin: 1px 0; color: #23422b; }
+    .price-line .currency { font-size: 1.24rem; font-weight: 800; }
+    .price-line .price-value { font-size: clamp(3rem,14vw,4.5rem); line-height: .98; font-weight: 900; letter-spacing: -.07em; font-variant-numeric: tabular-nums; }
+    .parcelas { margin: 4px 0 0; color: #4d5d50; font-size: .87rem; font-weight: 650; }
+    .price-terms { margin: 7px 0 11px; color: #637064; font-size: .76rem; }
+    .savings { display: inline-flex; gap: 5px; align-items: center; margin-bottom: 13px; padding: 6px 9px; border-radius: 7px; background: #e0f0dc; color: #2d7136; font-size: .78rem; font-weight: 800; }
+    .offer-list { display: grid; gap: 7px; padding: 13px 0; border-top: 1px solid #dfe9dc; border-bottom: 1px solid #dfe9dc; list-style: none; margin: 0 0 14px; }
+    .offer-list li { display: flex; align-items: flex-start; gap: 8px; color: #374239; font-size: .84rem; }
+    .offer-list svg { width: 17px; height: 17px; flex: 0 0 auto; margin-top: 2px; color: var(--green-deep); }
+    .cta.big { min-height: 61px; font-size: .94rem; line-height: 1.23; animation-duration: 3.1s; }
+    .cta-sub { display: block; margin-top: 3px; font-size: .72rem; font-weight: 600; opacity: .93; }
+    .payment-icons { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; margin: 13px 0 3px; }
+    .payment-icons span { display: inline-flex; align-items: center; gap: 5px; padding: 5px 9px; border: 1px solid #e0e7de; border-radius: 7px; background: rgba(255,255,255,.82); color: #59615a; font-size: .72rem; font-weight: 700; }
+    .payment-icons svg { width: 15px; height: 15px; }
+    .timer-inline { margin: 12px 0 0; color: #59635b; text-align: center; font-size: .76rem; }
+    .timer-inline strong { color: #34463a; font-variant-numeric: tabular-nums; letter-spacing: .06em; }
+    .guarantee { display: grid; grid-template-columns: 91px 1fr; align-items: center; gap: 13px; }
+    .guarantee-seal { display: grid; place-items: center; width: 88px; height: 88px; padding: 8px; border: 2px dashed #70a06e; border-radius: 50%; background: #eff7eb; color: #397741; text-align: center; transform: rotate(-6deg); }
+    .guarantee-seal strong { display: block; font-size: 1.55rem; line-height: 1; }
+    .guarantee-seal span { display: block; margin-top: 4px; font-size: .55rem; font-weight: 850; letter-spacing: .08em; }
+    .guarantee p { margin: 0; color: #505751; font-size: .84rem; }
+    .faq { display: grid; gap: 8px; margin-top: 14px; }
+    .faq details { border: 1px solid #e7e9e6; border-radius: 10px; background: #fff; }
+    .faq summary { position: relative; padding: 13px 40px 13px 13px; list-style: none; cursor: pointer; font-size: .87rem; font-weight: 750; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { position: absolute; top: 50%; right: 14px; content: "+"; transform: translateY(-50%); color: var(--blue); font-size: 1.25rem; font-weight: 500; }
+    .faq details[open] summary::after { content: "−"; }
+    .faq details p { margin: 0; padding: 0 13px 13px; color: #5b6064; font-size: .82rem; }
+    .final-card { overflow: visible; text-align: center; background: linear-gradient(145deg,#eef6ed,#fff 55%); }
+    .final-card .post-head { text-align: left; }
+    .final-card h2 { max-width: 480px; margin: 3px auto 12px; font-size: clamp(1.8rem,6vw,2.55rem); }
+    .final-card p { margin: 0 0 17px; color: #566057; font-size: .92rem; }
+    .footer { width: min(100% - 24px,680px); margin: 0 auto; padding: 10px 8px 104px; color: #646a6e; text-align: center; font-size: .7rem; line-height: 1.55; }
+    .footer-brand { margin-bottom: 7px; color: #454d48; font-size: .82rem; font-weight: 800; }
+    .footer p { margin: 8px 0; }
+    .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 16px; margin-top: 12px; }
+    .footer-links a { color: #4e6174; text-underline-offset: 2px; }
+    .mobile-buy { position: fixed; z-index: 55; right: 0; bottom: 0; left: 0; display: flex; justify-content: center; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); border-top: 1px solid rgba(0,0,0,.08); background: rgba(255,255,255,.96); box-shadow: 0 -4px 15px rgba(0,0,0,.08); transform: translateY(120%); opacity: 0; transition: transform .28s,opacity .28s; backdrop-filter: blur(10px); }
+    .mobile-buy.visible { transform: none; opacity: 1; }
+    .mobile-buy .cta { width: min(100%, 650px); min-height: 46px; padding: 9px 14px; font-size: .91rem; }
+    .toast { position: fixed; z-index: 110; left: 50%; bottom: calc(77px + env(safe-area-inset-bottom)); width: min(92vw,430px); padding: 13px 15px; border: 1px solid #dce5dc; border-radius: 12px; background: #fff; box-shadow: 0 8px 30px rgba(25,43,30,.18); color: #334137; font-size: .86rem; font-weight: 680; text-align: center; opacity: 0; pointer-events: none; transform: translate(-50%,12px); transition: opacity .2s,transform .2s; }
+    .toast.show { opacity: 1; transform: translate(-50%,0); }
+    .modal-backdrop { position: fixed; z-index: 120; inset: 0; display: none; align-items: center; justify-content: center; padding: 18px; background: rgba(24,30,27,.56); }
+    .modal-backdrop.open { display: flex; }
+    .modal { position: relative; width: min(100%,440px); padding: 24px 19px 20px; border-radius: 16px; background: #fff; box-shadow: 0 18px 60px rgba(0,0,0,.23); }
+    .modal h2 { margin: 4px 0 8px; font-size: 1.45rem; }
+    .modal p { color: #58605a; font-size: .88rem; }
+    .modal-close { position: absolute; top: 11px; right: 11px; display: grid; place-items: center; width: 36px; height: 36px; border: 0; border-radius: 50%; background: #f0f2f5; color: #43484b; font-size: 1.25rem; cursor: pointer; }
+    .modal-actions { display: grid; gap: 8px; margin-top: 16px; }
+    .modal-secondary { min-height: 43px; border: 0; border-radius: 9px; background: transparent; color: #65676b; font-size: .83rem; font-weight: 700; cursor: pointer; }
+    .video-modal-frame { width: 100%; aspect-ratio: 16/9; border: 0; border-radius: 10px; background: #eef4ec; }
+    .fade-in { opacity: 0; transform: translateY(13px); transition: opacity .48s ease,transform .48s ease; }
+    .fade-in.is-visible { opacity: 1; transform: none; }
+    .print-note { margin: 8px 0 0; color: var(--muted); font-size: .69rem; }
+    @media (min-width: 680px) {
+      main { margin-top: 16px; }
+      .post { padding: 21px; }
+      .hero-photo { aspect-ratio: 1.5/1; object-position: 56% 41%; }
+      .steps { grid-template-columns: repeat(3,1fr); }
+      .step { grid-template-columns: 1fr; gap: 8px; min-height: 134px; }
+      .bonus-grid { grid-template-columns: 1fr 1fr; }
+      .bonus-card:last-child { grid-column: 1/-1; }
+      .bonus-card:last-child img { width: 140px; }
+      .bonus-card:last-child { grid-template-columns: 140px 1fr; }
+    }
+    @media (min-width: 720px) { .mobile-buy { display: none; } }
+    @media (prefers-reduced-motion: reduce) {
+      *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .fade-in { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M11.4 20C5.7 17.1 3.4 12.4 5.4 7.6c4.4.2 7.1 3 7.1 7.1 1.2-4.2 4-6.8 8-7.4.5 5.2-2.4 10-8.4 12.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>Kit Consultório Nutri</span>
+      </div>
+      <a class="top-cta" href="#oferta">Quero o kit</a>
+    </div>
+    <div class="urgency" role="status" aria-live="polite">Oferta especial termina em: <strong data-countdown>00:00:00</strong></div>
+  </header>
+
+  <main id="conteudo">
+    <article class="post hero-post fade-in" id="inicio">
+      <header class="post-head">
+        <div class="avatar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M11.4 20C5.7 17.1 3.4 12.4 5.4 7.6c4.4.2 7.1 3 7.1 7.1 1.2-4.2 4-6.8 8-7.4.5 5.2-2.4 10-8.4 12.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div><div class="poster-name">Kit Consultório Nutri <span class="verified" aria-label="Página verificada"><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.3 12.2 3l2.8-.1 1.1 2.6 2.3 1.6-.8 2.7.8 2.8-2.3 1.5-1.1 2.7-2.8-.1L10 18.4l-2.2-1.7-2.8.1-1.1-2.7-2.3-1.5.8-2.8-.8-2.7 2.3-1.6L5 2.9l2.8.1L10 1.3Z"/><path d="m6.7 9.9 2.1 2.1 4.5-4.6" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="post-meta">Patrocinado <span aria-hidden="true">·</span> <svg viewBox="0 0 20 20" aria-label="Público"><circle cx="10" cy="10" r="7.2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2.9 10h14.2M10 2.8c2 2 2.8 4.4 2.8 7.2s-.8 5.2-2.8 7.2c-2-2-2.8-4.4-2.8-7.2S8 4.8 10 2.8Z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></div></div>
+      </header>
+      <div class="post-copy">
+        <div class="eyebrow"><span class="dot"></span>Para nutricionistas que querem atender com mais segurança</div>
+        <h1>Entre na consulta com o recurso certo na mão</h1>
+        <p class="hero-copy">+200 modelos para nutricionistas conduzirem atendimentos com mais clareza, agilidade e padrão profissional.</p>
+      </div>
+      <div class="hero-media">
+        <!-- Troque public/imagens/hero-nutri.webp pela foto final. Prompt: nutricionista brasileira sorrindo, de jaleco, segurando tablet em consultório claro, luz natural, enquadramento editorial profissional. -->
+        <img class="hero-photo" src="imagens/hero-nutri.webp" alt="Nutricionista sorridente de jaleco em um consultório claro, segurando um tablet">
+        <div class="hero-caption"><span class="caption-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M3 5.5h14v11H3zM6 3.5h8M6 8.5h8M6 11.5h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Mais clareza para o seu próximo atendimento</span></div>
+      </div>
+      <div class="mockup-frame">
+        <!-- Troque public/imagens/mockup-kit.webp pelo mockup final dos dispositivos e materiais. -->
+        <img class="mockup-img" src="imagens/mockup-kit.webp" alt="Prévia do Kit Consultório Nutri em notebook, tablet e celular, com modelos digitais organizados">
+        <span class="mockup-label">Por dentro do kit</span>
+      </div>
+      <div class="check-grid" aria-label="Características do kit">
+        <div class="check-item"><span class="checkmark" aria-hidden="true">✓</span><span>Acesso imediato</span></div>
+        <div class="check-item"><span class="checkmark" aria-hidden="true">✓</span><span>PDFs editáveis</span></div>
+        <div class="check-item"><span class="checkmark" aria-hidden="true">✓</span><span>Organizado por objetivo</span></div>
+        <div class="check-item"><span class="checkmark" aria-hidden="true">✓</span><span>Atualizações mensais grátis</span></div>
+      </div>
+      <a class="cta cta-small" href="#preview">Quero ver o kit por dentro <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14m0 0 6-6m-6 6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="trust-line"><span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="4.5" y="8.5" width="11" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M7 8.5V6a3 3 0 0 1 6 0v2.5" stroke="currentColor" stroke-width="1.5"/></svg>Pagamento seguro*</span><span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2.5 16 5v4.7c0 3.6-2.6 6.2-6 7.8-3.4-1.6-6-4.2-6-7.8V5l6-2.5Z" stroke="currentColor" stroke-width="1.5"/><path d="m7 10 2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Garantia de 15 dias*</span><span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m11 2-7 9h5l-1 7 8-10h-5l1-6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>Acesso imediato*</span></div>
+      <div class="social-proof"><span class="reactions"><span class="reaction-badges" aria-hidden="true"><span class="reaction-like">↑</span><span class="reaction-love">♥</span></span> Reações</span><span>Comentários · Compartilhamentos</span></div>
+      <div class="social-actions">
+        <button class="social-action like-button" type="button" aria-pressed="false" data-testid="button-like-hero"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10v10H4a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h3Zm0 10h9.5a2 2 0 0 0 1.9-1.4l2-6.5a1.6 1.6 0 0 0-1.5-2.1H14l.8-3.1A2.3 2.3 0 0 0 12.6 4L7 10v10Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>Curtir</span></button>
+        <a class="social-action" href="#comentarios"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-8 7.5 8.8 8.8 0 0 1-3.7-.8L4 19l1.1-3.4A7.2 7.2 0 0 1 4 11.5 7.5 7.5 0 0 1 12 4a7.5 7.5 0 0 1 8 7.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>Comentar</span></a>
+        <button class="social-action share-button" type="button"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m14 5 6 5-6 5v-3c-5.2 0-8 2-10 6 .4-6.7 3.5-10 10-10V5Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Compartilhar</span></button>
+      </div>
+    </article>
+
+    <article class="post fade-in" id="como-funciona">
+      <header class="post-head"><div class="avatar" aria-hidden="true">KN</div><div><div class="poster-name">Kit Consultório Nutri <span class="verified" aria-hidden="true">✓</span></div><div class="post-meta">Patrocinado · Público</div></div></header>
+      <div class="post-copy"><h2>Como funciona na prática</h2><p>Materiais organizados para você encontrar o que precisa e adaptar à sua rotina de atendimento.</p></div>
+      <div class="steps">
+        <div class="step"><span class="step-number">1</span><div><h3>Escolha o objetivo</h3><p>Emagrecimento, ganho de massa, reeducação e outros objetivos.</p></div></div>
+        <div class="step"><span class="step-number">2</span><div><h3>Abra a pasta certa</h3><p>Encontre o modelo pronto para a etapa do atendimento.</p></div></div>
+        <div class="step"><span class="step-number">3</span><div><h3>Personalize e atenda</h3><p>Edite com sua logo, imprima ou envie no WhatsApp e atenda.</p></div></div>
+      </div>
+      <div class="video-placeholder">
+        <div class="video-inner"><button class="play-button video-trigger" type="button" aria-label="Abrir demonstração do kit"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.8c0-.8.9-1.3 1.6-.9l9.2 5.5a1.8 1.8 0 0 1 0 3.1l-9.2 5.5c-.7.4-1.6-.1-1.6-.9V5.8Z"/></svg></button><strong>Veja como os materiais ficam organizados</strong><span>Vídeo de demonstração</span></div>
+      </div>
+      <p class="soft-note">O acesso ao vídeo demonstrativo será adicionado aqui.</p>
+      <div class="social-proof"><span class="reactions"><span class="reaction-badges" aria-hidden="true"><span class="reaction-like">↑</span><span class="reaction-love">♥</span></span> Reações</span><span>Comentários · Compartilhamentos</span></div>
+      <div class="social-actions"><button class="social-action like-button" type="button" aria-pressed="false"><span aria-hidden="true">↑</span> Curtir</button><a class="social-action" href="#comentarios">Comentar</a><button class="social-action share-button" type="button">Compartilhar</button></div>
+    </article>
+
+    <article class="post fade-in">
+      <header class="post-head"><div class="avatar" aria-hidden="true">KN</div><div><div class="poster-name">Kit Consultório Nutri <span class="verified" aria-hidden="true">✓</span></div><div class="post-meta">Patrocinado · Público</div></div></header>
+      <div class="post-copy"><h2>Se você já travou na hora de montar a consulta, esse kit é para você</h2><p>Nem sempre falta conhecimento. Às vezes, falta ter o recurso certo organizado e pronto para adaptar.</p></div>
+      <ul class="symptom-list">
+        <li><span class="cross" aria-hidden="true">×</span><span>Perder horas montando plano alimentar do zero para cada paciente</span></li>
+        <li><span class="cross" aria-hidden="true">×</span><span>Paciente chega sem entender nada e abandona o acompanhamento</span></li>
+        <li><span class="cross" aria-hidden="true">×</span><span>Anamnese desorganizada que atrasa a consulta</span></li>
+        <li><span class="cross" aria-hidden="true">×</span><span>Material com cara amadora que não passa autoridade</span></li>
+        <li><span class="cross" aria-hidden="true">×</span><span>Não saber o que enviar de orientação depois da consulta</span></li>
+        <li><span class="cross" aria-hidden="true">×</span><span>Sentir que atende bem, mas a entrega parece “simples demais”</span></li>
+      </ul>
+      <div class="social-proof"><span class="reactions"><span class="reaction-badges" aria-hidden="true"><span class="reaction-like">↑</span><span class="reaction-love">♥</span></span> Reações</span><span>Comentários · Compartilhamentos</span></div>
+      <div class="social-actions"><button class="social-action like-button" type="button" aria-pressed="false">↑ Curtir</button><a class="social-action" href="#comentarios">Comentar</a><button class="social-action share-button" type="button">Compartilhar</button></div>
+    </article>
+
+    <article class="post agitation fade-in">
+      <header class="post-head"><div class="avatar" aria-hidden="true">KN</div><div><div class="poster-name">Kit Consultório Nutri <span class="verified" aria-hidden="true">✓</span></div><div class="post-meta">Patrocinado · Público</div></div></header>
+      <div class="post-copy"><div class="quote-mark" aria-hidden="true">“</div><h2>Cada consulta sem material profissional é valor que você deixa de mostrar</h2><p class="lead">O paciente que não entende o plano hoje abandona amanhã. Você estudou anos para entregar resultado — sua entrega precisa ter o mesmo padrão.</p></div>
+      <a class="cta cta-small" href="#oferta">Quero padronizar minhas consultas <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="social-proof"><span class="reactions"><span class="reaction-badges" aria-hidden="true"><span class="reaction-like">↑</span><span class="reaction-love">♥</span></span> Reações</span><span>Comentários · Compartilhamentos</span></div>
+      <div class="social-actions"><button class="social-action like-button" type="button" aria-pressed="false">↑ Curtir</button><a class="social-action" href="#comentarios">Comentar</a><button class="social-action share-button" type="button">Compartilhar</button></div>
+    </article>
+
+    <article class="post fade-in" id="comentarios">
+      <header class="post-head"><div class="avatar" aria-hidden="true">KN</div><div><div class="poster-name">Kit Consultório Nutri <span class="verified" aria-hidden="true">✓</span></div><div class="post-meta">Patrocinado · Público</div></div></header>
+      <div class="post-copy"><h2>Nutricionistas que já usam o kit</h2><p>Um espaço para conhecer relatos reais de quem usa os materiais no consultório.</p></div>
+      <div class="example-banner"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2.5 18 17H2l8-14.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 7v4m0 2.6v.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>EXEMPLOS ILUSTRATIVOS — textos de demonstração. Substitua por depoimentos reais autorizados antes de publicar.</div>
+      <!-- TROCAR: estes seis depoimentos são apenas EXEMPLOS ilustrativos. Inserir relatos reais, autorizados e fiéis ao original; não publicar como prova social. -->
+      <div class="comments" aria-label="Exemplos de comentários ilustrativos">
+        <div class="comment"><div class="avatar" aria-hidden="true">MA</div><div><div class="comment-bubble"><strong>Marina A.</strong><p>EXEMPLO: Ter os arquivos separados por objetivo facilita encontrar o material que quero adaptar para cada consulta.</p></div><div class="comment-actions"><span class="comment-like">Curtir</span> · Responder · exemplo <span class="comment-mini-reactions"><span>↑</span> ♥</span></div></div></div>
+        <div class="comment"><div class="avatar" aria-hidden="true">LC</div><div><div class="comment-bubble"><strong>Luana C.</strong><p>EXEMPLO: Gostei de poder colocar minha identidade visual e enviar orientações organizadas depois do atendimento.</p></div><div class="comment-actions"><span class="comment-like">Curtir</span> · Responder · exemplo <span class="comment-mini-reactions"><span>↑</span> ♥</span></div></div></div>
+        <div class="comment"><div class="avatar" aria-hidden="true">BF</div><div><div class="comment-bubble"><strong>Bruna F.</strong><p>EXEMPLO: A variedade de fichas me ajuda a preparar a consulta sem começar cada documento do zero.</p></div><div class="comment-actions"><span class="comment-like">Curtir</span> · Responder · exemplo <span class="comment-mini-reactions"><span>↑</span> ♥</span></div></div></div>
+        <div class="comment"><div class="avatar" aria-hidden="true">RD</div><div><div class="comment-bubble"><strong>Renata D.</strong><p>EXEMPLO: As listas de substituição e os materiais educativos são simples de personalizar para minha rotina.</p></div><div class="comment-actions"><span class="comment-like">Curtir</span> · Responder · exemplo <span class="comment-mini-reactions"><span>↑</span> ♥</span></div></div></div>
+        <div class="comment"><div class="avatar" aria-hidden="true">CM</div><div><div class="comment-bubble"><strong>Camila M.</strong><p>EXEMPLO: Consigo organizar melhor o que entrego para o paciente em cada etapa do acompanhamento.</p></div><div class="comment-actions"><span class="comment-like">Curtir</span> · Responder · exemplo <span class="comment-mini-reactions"><span>↑</span> ♥</span></div></div></div>
+        <div class="comment"><div class="avatar" aria-hidden="true">JS</div><div><div class="comment-bubble"><strong>Júlia S.</strong><p>EXEMPLO: Estou começando a atender e ter modelos editáveis como ponto de partida é bem prático.</p></div><div class="comment-actions"><span class="comment-like">Curtir</span> · Responder · exemplo <span class="comment-mini-reactions"><span>↑</span> ♥</span></div></div></div>
+      </div>
+      <div class="carousel">
+        <div class="carousel-head"><strong>Área para prints autorizados</strong><div class="carousel-buttons"><button type="button" data-slide="-1" aria-label="Ver imagem anterior">‹</button><button type="button" data-slide="1" aria-label="Ver próxima imagem">›</button></div></div>
+        <div class="carousel-track" aria-label="Espaço reservado para prints reais de depoimentos">
+          <!-- Troque dep1.webp–dep6.webp por prints reais com autorização; estes arquivos são marcadores visuais, não depoimentos. -->
+          <img src="imagens/dep1.webp" alt="Área reservada para inserir print real de depoimento autorizado">
+          <img src="imagens/dep2.webp" alt="Área reservada para inserir print real de depoimento autorizado">
+          <img src="imagens/dep3.webp" alt="Área reservada para inserir print real de depoimento autorizado">
+          <img src="imagens/dep4.webp" alt="Área reservada para inserir print real de depoimento autorizado">
+          <img src="imagens/dep5.webp" alt="Área reservada para inserir print real de depoimento autorizado">
+          <img src="imagens/dep6.webp" alt="Área reservada para inserir print real de depoimento autorizado">
+        </div>
+        <p class="print-note">Os espaços acima são apenas marcadores de layout. Não representam prints ou relatos reais.</p>
+      </div>
+      <div class="social-proof"><span class="reactions"><span class="reaction-badges" aria-hidden="true"><span class="reaction-like">↑</span><span class="reaction-love">♥</span></span> Reações</span><span>Comentários · Compartilhamentos</span></div>
+      <div class="social-actions"><button class="social-action like-button" type="button" aria-pressed="false">↑ Curtir</button><a class="social-action" href="#comentarios">Comentar</a><button class="social-action share-button" type="button">Compartilhar</button></div>
+    </article>
+
+    <article class="post fade-in" id="preview">
+      <header class="post-head"><div class="avatar" aria-hidden="true">KN</div><div><div class="poster-name">Kit Consultório Nutri <span class="verified" aria-hidden="true">✓</span></div><div class="post-meta">Patrocinado · Público</div></div></header>
+      <div class="post-copy"><h2>Kit Consultório Nutri — +200 modelos prontos</h2><p>Materiais digitais para apoiar e organizar diferentes momentos do atendimento.</p></div>
+      <div class="contents-card">
+        <div class="folder-label"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M2.5 5.5A1.5 1.5 0 0 1 4 4h4l1.7 2h6.3a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 16 16H4a1.5 1.5 0 0 1-1.5-1.5v-9Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>Pastas organizadas por etapa e objetivo</div>
+        <ul class="included-list">
+          <li><span class="checkmark" aria-hidden="true">✓</span><span><strong>Anamneses e avaliações:</strong> anamnese nutricional completa, recordatório 24h, diário alimentar, questionário de frequência alimentar e ficha de antropometria.</span></li>
+          <li><span class="checkmark" aria-hidden="true">✓</span><span><strong>Planos alimentares prontos e editáveis por objetivo:</strong> emagrecimento, hipertrofia, reeducação alimentar, gestantes, esportistas e vegetarianos.</span></li>
+          <li><span class="checkmark" aria-hidden="true">✓</span><span>Cardápios semanais e listas de substituição.</span></li>
+          <li><span class="checkmark" aria-hidden="true">✓</span><span>Listas de compras e guias de mercado.</span></li>
+          <li><span class="checkmark" aria-hidden="true">✓</span><span>Materiais de educação alimentar para entregar ao paciente.</span></li>
+          <li><span class="checkmark" aria-hidden="true">✓</span><span>Receitas práticas ilustradas.</span></li>
+          <li><span class="checkmark" aria-hidden="true">✓</span><span>Orientações pré e pós-consulta.</span></li>
+          <li><span class="checkmark" aria-hidden="true">✓</span><span>Modelos de relatório de evolução e devolutiva.</span></li>
+          <li><span class="checkmark" aria-hidden="true">✓</span><span>Atualizações mensais sem custo extra.</span></li>
+        </ul>
+        <p class="included-note">Todos em PDF/Canva editável com espaço para a sua logo e dados.</p>
+      </div>
+      <div class="social-proof"><span class="reactions"><span class="reaction-badges" aria-hidden="true"><span class="reaction-like">↑</span><span class="reaction-love">♥</span></span> Reações</span><span>Comentários · Compartilhamentos</span></div>
+      <div class="social-actions"><button class="social-action like-button" type="button" aria-pressed="false">↑ Curtir</button><a class="social-action" href="#comentarios">Comentar</a><button class="social-action share-button" type="button">Compartilhar</button></div>
+    </article>
+
+    <article class="post fade-in" id="bonus">
+      <header class="post-head"><div class="avatar" aria-hidden="true">KN</div><div><div class="poster-name">Kit Consultório Nutri <span class="verified" aria-hidden="true">✓</span></div><div class="post-meta">Patrocinado · Público</div></div></header>
+      <div class="post-copy"><div class="eyebrow"><span class="dot"></span>Incluídos no kit</div><h2>5 bônus exclusivos para completar sua rotina</h2><p>Materiais extras para apoiar a comunicação, o planejamento e a presença profissional.</p></div>
+      <div class="bonus-grid">
+        <div class="bonus-card"><img src="imagens/bonus1.webp" alt="Mockup ilustrativo do bônus de scripts para WhatsApp" loading="lazy"><div class="bonus-info"><span class="bonus-label">GRÁTIS</span><h3>Scripts de WhatsApp para agendamento, retorno e fidelização</h3><span class="bonus-value">de <s data-bonus-index="0">R$ 27,00</s> GRÁTIS</span></div></div>
+        <div class="bonus-card"><img src="imagens/bonus2.webp" alt="Mockup ilustrativo do bônus de contrato e termo de consentimento" loading="lazy"><div class="bonus-info"><span class="bonus-label">GRÁTIS</span><h3>Contrato e termo de consentimento para atendimento nutricional</h3><span class="bonus-value">de <s data-bonus-index="1">R$ 19,00</s> GRÁTIS</span></div></div>
+        <div class="bonus-card"><img src="imagens/bonus3.webp" alt="Mockup ilustrativo do checklist de planejamento de consulta" loading="lazy"><div class="bonus-info"><span class="bonus-label">GRÁTIS</span><h3>Checklist de planejamento de consulta: antes, durante e depois</h3><span class="bonus-value">de <s data-bonus-index="2">R$ 17,00</s> GRÁTIS</span></div></div>
+        <div class="bonus-card"><img src="imagens/bonus4.webp" alt="Mockup ilustrativo do guia de honorários e retenção" loading="lazy"><div class="bonus-info"><span class="bonus-label">GRÁTIS</span><h3>Guia: como apresentar seus honorários e reter pacientes</h3><span class="bonus-value">de <s data-bonus-index="3">R$ 17,00</s> GRÁTIS</span></div></div>
+        <div class="bonus-card"><img src="imagens/bonus5.webp" alt="Mockup ilustrativo do pack de posts editáveis para Instagram" loading="lazy"><div class="bonus-info"><span class="bonus-label">GRÁTIS</span><h3>Pack de posts editáveis para o Instagram da nutricionista (30 artes)</h3><span class="bonus-value">de <s data-bonus-index="4">R$ 27,00</s> GRÁTIS</span></div></div>
+      </div>
+      <div class="social-proof"><span class="reactions"><span class="reaction-badges" aria-hidden="true"><span class="reaction-like">↑</span><span class="reaction-love">♥</span></span> Reações</span><span>Comentários · Compartilhamentos</span></div>
+      <div class="social-actions"><button class="social-action like-button" type="button" aria-pressed="false">↑ Curtir</button><a class="social-action" href="#comentarios">Comentar</a><button class="social-action share-button" type="button">Compartilhar</button></div>
+    </article>
+
+    <article class="post fade-in" id="oferta">
+      <header class="post-head"><div class="avatar" aria-hidden="true">KN</div><div><div class="poster-name">Kit Consultório Nutri <span class="verified" aria-hidden="true">✓</span></div><div class="post-meta">Patrocinado · Público</div></div></header>
+      <div class="post-copy"><h2>Veja quanto custaria separado</h2><p>Um jeito simples de visualizar o conjunto de materiais incluído.</p></div>
+      <div class="anchor-list" aria-label="Valores dos materiais incluídos">
+        <div class="anchor-row"><span>+200 modelos profissionais</span><strong data-anchor-main>R$ 97,00</strong></div>
+        <div class="anchor-row"><span>Bônus 1 · Scripts de WhatsApp</span><strong data-anchor-bonus-index="0">R$ 27,00</strong></div>
+        <div class="anchor-row"><span>Bônus 2 · Contrato e consentimento</span><strong data-anchor-bonus-index="1">R$ 19,00</strong></div>
+        <div class="anchor-row"><span>Bônus 3 · Checklist de consulta</span><strong data-anchor-bonus-index="2">R$ 17,00</strong></div>
+        <div class="anchor-row"><span>Bônus 4 · Guia de honorários</span><strong data-anchor-bonus-index="3">R$ 17,00</strong></div>
+        <div class="anchor-row"><span>Bônus 5 · Pack de posts</span><strong data-anchor-bonus-index="4">R$ 27,00</strong></div>
+        <div class="anchor-row anchor-total"><span>Total dos itens</span><strong data-anchor-total>R$ 204,00</strong></div>
+      </div>
+      <p class="anchor-caption">Mais de 250 materiais por menos do que o preço de um único modelo de consultoria.</p>
+      <div class="price-card">
+        <span class="most-chosen">MAIS ESCOLHIDO</span>
+        <p class="old-price">De <s data-old-price>R$ 204,00</s> por apenas</p>
+        <div class="price-line"><span class="currency">R$</span><span class="price-value" data-current-price>47,00</span></div>
+        <p class="parcelas" data-installments>ou consulte opções de parcelamento no checkout</p>
+        <p class="price-terms">pagamento único • acesso imediato • vitalício</p>
+        <span class="savings">Você economiza <span data-savings>R$ 157,00</span></span>
+        <ul class="offer-list">
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>+200 modelos editáveis organizados por objetivo</li>
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Os 5 bônus exclusivos incluídos</li>
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Acesso imediato, vitalício e atualizações mensais</li>
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Materiais em PDF/Canva editável para personalizar</li>
+        </ul>
+        <a class="cta big checkout-cta" href="#" data-checkout><span>QUERO O KIT COMPLETO AGORA<span class="cta-sub">Acesso imediato por e-mail</span></span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="payment-icons" aria-label="Formas de pagamento">
+          <span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m10 2.5 7 7.5-7 7.5L3 10l7-7.5Z" stroke="currentColor" stroke-width="1.5"/><path d="m7 10 2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Pix*</span>
+          <span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2.5" y="4" width="15" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 8h14" stroke="currentColor" stroke-width="1.5"/></svg>Cartão*</span>
+          <span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 2.5h9l3 3v12H4v-15Z" stroke="currentColor" stroke-width="1.5"/><path d="M13 2.5v3h3m-9 4h5m-5 3h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Boleto*</span>
+        </div>
+        <p class="timer-inline">Oferta especial termina em: <strong data-countdown>00:00:00</strong></p>
+        <p class="soft-note">*Formas de pagamento, acesso e condições dependem da configuração do checkout.</p>
+      </div>
+      <div class="social-proof"><span class="reactions"><span class="reaction-badges" aria-hidden="true"><span class="reaction-like">↑</span><span class="reaction-love">♥</span></span> Reações</span><span>Comentários · Compartilhamentos</span></div>
+      <div class="social-actions"><button class="social-action like-button" type="button" aria-pressed="false">↑ Curtir</button><a class="social-action" href="#comentarios">Comentar</a><button class="social-action share-button" type="button">Compartilhar</button></div>
+    </article>
+
+    <article class="post fade-in" id="garantia">
+      <header class="post-head"><div class="avatar" aria-hidden="true">KN</div><div><div class="poster-name">Kit Consultório Nutri <span class="verified" aria-hidden="true">✓</span></div><div class="post-meta">Patrocinado · Público</div></div></header>
+      <div class="guarantee"><div class="guarantee-seal" aria-label="Garantia de 15 dias"><div><strong>15</strong><span>DIAS</span></div></div><div><h2>Você pode conhecer o kit com tranquilidade</h2><p>Teste o kit por 15 dias. Se não gostar por qualquer motivo, devolvemos 100% do valor, sem burocracia. O risco é todo nosso.</p></div></div>
+      <p class="soft-note">Consulte as condições e o canal para solicitar a garantia no checkout ou com o suporte.</p>
+      <div class="social-proof"><span class="reactions"><span class="reaction-badges" aria-hidden="true"><span class="reaction-like">↑</span><span class="reaction-love">♥</span></span> Reações</span><span>Comentários · Compartilhamentos</span></div>
+      <div class="social-actions"><button class="social-action like-button" type="button" aria-pressed="false">↑ Curtir</button><a class="social-action" href="#comentarios">Comentar</a><button class="social-action share-button" type="button">Compartilhar</button></div>
+    </article>
+
+    <article class="post fade-in" id="faq">
+      <header class="post-head"><div class="avatar" aria-hidden="true">KN</div><div><div class="poster-name">Kit Consultório Nutri <span class="verified" aria-hidden="true">✓</span></div><div class="post-meta">Dúvidas frequentes · Público</div></div></header>
+      <div class="post-copy"><h2>Perguntas frequentes</h2><p>Informações para você decidir com clareza.</p></div>
+      <div class="faq">
+        <details><summary>Como recebo o acesso?</summary><p>O material é digital. Após a confirmação do pagamento, as instruções de acesso são enviadas por e-mail conforme a configuração do checkout.</p></details>
+        <details><summary>Em que formato vem?</summary><p>Os materiais são em PDF e Canva editável, conforme indicado em cada arquivo. Você precisará de acesso ao Canva para editar os modelos disponibilizados nessa plataforma.</p></details>
+        <details><summary>Posso editar e colocar minha logo?</summary><p>Sim. Os materiais editáveis têm espaço para incluir sua logo e seus dados profissionais.</p></details>
+        <details><summary>Funciona para atendimento online?</summary><p>Os materiais digitais podem apoiar atendimentos presenciais ou online. Você decide como adaptar e utilizar cada recurso na sua prática.</p></details>
+        <details><summary>Serve para quem está começando?</summary><p>Sim. A organização por pastas e objetivos pode servir como ponto de partida para profissionais em diferentes momentos da carreira. Personalize os materiais com seu critério profissional.</p></details>
+        <details><summary>Posso imprimir quantas vezes quiser?</summary><p>Os arquivos são digitais e podem ser impressos para uso profissional, respeitando os termos de uso e as condições de licença do material.</p></details>
+        <details><summary>Como funciona a garantia?</summary><p>Você tem 15 dias para conhecer o material. Se decidir que não é para você, solicite a devolução de acordo com as instruções e condições disponibilizadas no checkout.</p></details>
+        <details><summary>O pagamento é seguro?</summary><p>O pagamento é realizado na página do checkout, quando configurada. Antes de publicar, informe ali o processador e as condições reais de pagamento.</p></details>
+      </div>
+      <div class="social-proof"><span class="reactions"><span class="reaction-badges" aria-hidden="true"><span class="reaction-like">↑</span><span class="reaction-love">♥</span></span> Reações</span><span>Comentários · Compartilhamentos</span></div>
+      <div class="social-actions"><button class="social-action like-button" type="button" aria-pressed="false">↑ Curtir</button><a class="social-action" href="#comentarios">Comentar</a><button class="social-action share-button" type="button">Compartilhar</button></div>
+    </article>
+
+    <article class="post final-card fade-in">
+      <header class="post-head"><div class="avatar" aria-hidden="true">KN</div><div><div class="poster-name">Kit Consultório Nutri <span class="verified" aria-hidden="true">✓</span></div><div class="post-meta">Patrocinado · Público</div></div></header>
+      <div class="post-copy"><div class="eyebrow"><span class="dot"></span>Seu próximo atendimento começa agora</div><h2>Sua próxima consulta pode ter outro padrão</h2><p>Tenha modelos organizados para adaptar à sua rotina e ao seu jeito de atender.</p></div>
+      <a class="cta checkout-cta" data-checkout href="#">Quero meu kit agora <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <p class="soft-note">Kit digital · Acesso imediato após confirmação do pagamento</p>
+      <div class="social-proof"><span class="reactions"><span class="reaction-badges" aria-hidden="true"><span class="reaction-like">↑</span><span class="reaction-love">♥</span></span> Reações</span><span>Comentários · Compartilhamentos</span></div>
+      <div class="social-actions"><button class="social-action like-button" type="button" aria-pressed="false">↑ Curtir</button><a class="social-action" href="#comentarios">Comentar</a><button class="social-action share-button" type="button">Compartilhar</button></div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">Kit Consultório Nutri</div>
+    <p>Este é um material digital de apoio e organização para nutricionistas. Não substitui a avaliação individualizada do profissional nem a prescrição dietética. Os resultados variam conforme cada caso.</p>
+    <p>Os materiais devem ser avaliados e adaptados pelo profissional conforme a necessidade de cada paciente e as normas aplicáveis à sua atuação.</p>
+    <nav class="footer-links" aria-label="Links do rodapé">
+      <a href="#termos" data-legal="termos">Termos de uso</a>
+      <a href="#privacidade" data-legal="privacidade">Política de privacidade</a>
+      <a href="#contato" data-contact>Contato</a>
+    </nav>
+    <p>© <span data-year></span> Kit Consultório Nutri. Todos os direitos reservados.</p>
+  </footer>
+
+  <div class="mobile-buy" id="mobileBuy"><a class="cta checkout-cta" data-checkout href="#">Quero o kit · <span data-current-price-inline>R$ 47,00</span></a></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" role="presentation">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+      <button class="modal-close" type="button" aria-label="Fechar janela">×</button>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <!-- Pixel Meta: cole o código real aqui somente quando houver configuração de privacidade/consentimento. -->
+  <!-- Google tag: cole o código real aqui somente quando houver configuração de privacidade/consentimento. -->
+  <script>
+    /*
+      CONFIGURAÇÃO DO PRODUTO — troque os valores abaixo antes de publicar:
+      - Checkout e preço: CHECKOUT_URL, PRECO_DE, PRECO_POR e PARCELAS.
+      - Prazo: DATA_FIM_OFERTA. Deixe vazio para usar uma janela de 24h salva no navegador; ao expirar, uma nova janela começa no próximo acesso. Informe uma data real antes de publicar uma oferta com prazo fixo.
+      - Depoimentos: troque somente por falas/prints verdadeiros, autorizados; exemplos estão marcados como EXEMPLOS.
+      - Imagens: substitua os arquivos em public/imagens (hero-nutri.webp, mockup-kit.webp, bonus1–5.webp, dep1–6.webp).
+    */
+    const CHECKOUT_URL = "";
+    const PRECO_DE = 204;
+    const PRECO_POR = 47;
+    const VALORES_BONUS = [27, 19, 17, 17, 27];
+    const PARCELAS = "consulte opções de parcelamento no checkout";
+    const DATA_FIM_OFERTA = "";
+    const NOME_PRODUTO = "Kit Consultório Nutri";
+    const EMAIL_SUPORTE = "SEU_EMAIL_AQUI";
+    const VIDEO_DEMO_URL = "";
+
+    const money = value => new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(Number(value) || 0);
+    const formatPriceNumber = value => new Intl.NumberFormat("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(Number(value) || 0);
+    const toast = document.getElementById("toast");
+    let toastTimer;
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("show"), 4200);
+    }
+
+    document.title = NOME_PRODUTO + " — Entre na consulta com o recurso certo";
+    document.querySelectorAll("[data-year]").forEach(el => el.textContent = new Date().getFullYear());
+    document.querySelectorAll("[data-current-price]").forEach(el => el.textContent = formatPriceNumber(PRECO_POR));
+    document.querySelectorAll("[data-current-price-inline]").forEach(el => el.textContent = money(PRECO_POR));
+    document.querySelectorAll("[data-old-price]").forEach(el => el.textContent = money(PRECO_DE));
+    document.querySelectorAll("[data-installments]").forEach(el => el.textContent = "ou " + PARCELAS);
+    document.querySelectorAll("[data-savings]").forEach(el => el.textContent = money(Math.max(PRECO_DE - PRECO_POR, 0)));
+    const VALOR_MODELOS = Math.max(PRECO_DE - VALORES_BONUS.reduce((sum, value) => sum + value, 0), 0);
+    document.querySelectorAll("[data-anchor-main]").forEach(el => el.textContent = money(VALOR_MODELOS));
+    document.querySelectorAll("[data-anchor-bonus-index]").forEach(el => el.textContent = money(VALORES_BONUS[Number(el.dataset.anchorBonusIndex)] || 0));
+    const anchorTotal = VALOR_MODELOS + VALORES_BONUS.reduce((sum, value) => sum + value, 0);
+    document.querySelectorAll("[data-anchor-total]").forEach(el => el.textContent = money(anchorTotal));
+    document.querySelectorAll("[data-old-price]").forEach(el => el.textContent = money(anchorTotal));
+    document.querySelectorAll(".bonus-value s[data-bonus-index]").forEach(el => el.textContent = money(VALORES_BONUS[Number(el.dataset.bonusIndex)] || 0));
+
+    // Configure CHECKOUT_URL before publication; when blank every purchase CTA explains the missing setup.
+    document.querySelectorAll("[data-checkout]").forEach(link => {
+      if (CHECKOUT_URL.trim()) link.href = CHECKOUT_URL;
+      link.addEventListener("click", event => {
+        if (!CHECKOUT_URL.trim()) {
+          event.preventDefault();
+          showToast("Checkout ainda não configurado. Adicione o endereço em CHECKOUT_URL no script antes de receber pedidos.");
+        }
+      });
+    });
+
+    const timerKey = "kitConsultorioNutriOfertaFim:" + (DATA_FIM_OFERTA.trim() || "auto-24h");
+    const configuredOfferEnd = DATA_FIM_OFERTA.trim() ? new Date(DATA_FIM_OFERTA).getTime() : NaN;
+    let savedEnd = 0;
+    try { savedEnd = Number(localStorage.getItem(timerKey)); } catch (_) { savedEnd = 0; }
+    let offerEnd;
+    if (savedEnd > Date.now()) offerEnd = savedEnd;
+    else if (Number.isFinite(configuredOfferEnd) && configuredOfferEnd > Date.now()) offerEnd = configuredOfferEnd;
+    else {
+      offerEnd = Date.now() + 24 * 60 * 60 * 1000;
+      try { localStorage.setItem(timerKey, String(offerEnd)); } catch (_) {}
+    }
+    function tickCountdown() {
+      let remaining = Math.max(0, offerEnd - Date.now());
+      if (remaining <= 0) {
+        document.querySelectorAll("[data-countdown]").forEach(el => el.textContent = "00:00:00");
+        return;
+      }
+      const seconds = Math.floor(remaining / 1000);
+      const display = [Math.floor(seconds / 3600), Math.floor((seconds % 3600) / 60), seconds % 60].map(n => String(n).padStart(2, "0")).join(":");
+      document.querySelectorAll("[data-countdown]").forEach(el => el.textContent = display);
+    }
+    tickCountdown();
+    setInterval(tickCountdown, 1000);
+
+    // Gentle reveal; content stays visible when reduced motion is requested or IntersectionObserver is unavailable.
+    const revealItems = document.querySelectorAll(".fade-in");
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add("is-visible"); observer.unobserve(entry.target); }
+      }), { threshold: .08 });
+      revealItems.forEach(item => observer.observe(item));
+    } else revealItems.forEach(item => item.classList.add("is-visible"));
+
+    document.querySelectorAll(".like-button").forEach(button => button.addEventListener("click", () => {
+      const liked = button.getAttribute("aria-pressed") === "true";
+      button.setAttribute("aria-pressed", String(!liked));
+      button.classList.toggle("is-liked", !liked);
+      if (!liked) {
+        const rect = button.getBoundingClientRect();
+        const bubble = document.createElement("span");
+        bubble.className = "floating-reaction";
+        bubble.textContent = "♥";
+        bubble.setAttribute("aria-hidden", "true");
+        bubble.style.left = (rect.left + rect.width / 2 - 8) + "px";
+        bubble.style.top = (rect.top - 7) + "px";
+        document.body.appendChild(bubble);
+        setTimeout(() => bubble.remove(), 950);
+      }
+    }));
+    document.querySelectorAll(".share-button").forEach(button => button.addEventListener("click", async () => {
+      try {
+        if (navigator.share) await navigator.share({ title: NOME_PRODUTO, text: "Conheça o Kit Consultório Nutri.", url: location.href });
+        else if (navigator.clipboard) { await navigator.clipboard.writeText(location.href); showToast("Link copiado para compartilhar."); }
+        else showToast("Copie o endereço desta página para compartilhar.");
+      } catch (error) { if (error.name !== "AbortError") showToast("Não foi possível compartilhar agora. Copie o link da página."); }
+    }));
+
+    const modalBackdrop = document.getElementById("modalBackdrop");
+    const modal = modalBackdrop.querySelector(".modal");
+    const modalContent = document.getElementById("modalContent");
+    let previousFocus;
+    function openModal(content) {
+      previousFocus = document.activeElement;
+      modalContent.innerHTML = content;
+      modalBackdrop.classList.add("open");
+      document.body.style.overflow = "hidden";
+      modal.focus();
+    }
+    function closeModal() {
+      modalBackdrop.classList.remove("open");
+      document.body.style.overflow = "";
+      if (previousFocus && previousFocus.focus) previousFocus.focus();
+    }
+    modalBackdrop.querySelector(".modal-close").addEventListener("click", closeModal);
+    modalBackdrop.addEventListener("click", event => { if (event.target === modalBackdrop) closeModal(); });
+    document.addEventListener("keydown", event => { if (event.key === "Escape" && modalBackdrop.classList.contains("open")) closeModal(); });
+    document.querySelectorAll(".video-trigger").forEach(button => button.addEventListener("click", () => {
+      if (VIDEO_DEMO_URL.trim()) openModal('<h2 id="modalTitle">Demonstração do kit</h2><iframe class="video-modal-frame" src="' + VIDEO_DEMO_URL.replace(/"/g, "&quot;") + '" title="Vídeo de demonstração do Kit Consultório Nutri" allowfullscreen loading="lazy"></iframe>');
+      else openModal('<h2 id="modalTitle">Demonstração do kit</h2><p>O vídeo de demonstração ainda não foi configurado. Adicione o endereço em <strong>VIDEO_DEMO_URL</strong> no script para exibi-lo aqui.</p>');
+    }));
+    document.querySelectorAll("[data-legal]").forEach(link => link.addEventListener("click", event => {
+      event.preventDefault();
+      const isTerms = link.dataset.legal === "termos";
+      openModal(isTerms
+        ? '<h2 id="modalTitle">Termos de uso</h2><p>Este espaço deve conter os termos de uso completos do produto antes da publicação. Descreva direitos de acesso, licença de uso, restrições de compartilhamento, cancelamento e contato para suporte.</p>'
+        : '<h2 id="modalTitle">Política de privacidade</h2><p>Este espaço deve conter a política de privacidade completa antes da publicação. Informe quais dados são coletados, para quais finalidades, como são tratados e quais são os canais de contato e direitos dos titulares.');
+    }));
+    document.querySelector("[data-contact]").addEventListener("click", event => {
+      if (EMAIL_SUPORTE === "SEU_EMAIL_AQUI" || !EMAIL_SUPORTE.includes("@")) {
+        event.preventDefault();
+        showToast("Configure EMAIL_SUPORTE no script para disponibilizar o contato.");
+      } else event.currentTarget.href = "mailto:" + EMAIL_SUPORTE;
+    });
+    document.querySelectorAll("[data-slide]").forEach(button => button.addEventListener("click", () => {
+      const track = document.querySelector(".carousel-track");
+      track.scrollBy({ left: Number(button.dataset.slide) * 280, behavior: "smooth" });
+    }));
+
+    const mobileBuy = document.getElementById("mobileBuy");
+    const hero = document.querySelector(".hero-post");
+    const offer = document.getElementById("oferta");
+    if ("IntersectionObserver" in window) {
+      const heroObserver = new IntersectionObserver(entries => {
+        const visible = entries[0].isIntersecting;
+        mobileBuy.classList.toggle("visible", !visible);
+      }, { threshold: .05 });
+      heroObserver.observe(hero);
+      const offerObserver = new IntersectionObserver(entries => {
+        mobileBuy.classList.toggle("visible", !entries[0].isIntersecting && window.scrollY > hero.offsetHeight / 2);
+      }, { threshold: .02 });
+      offerObserver.observe(offer);
+    }
+
+    // Exit offer is shown once per tab session. It is an optional invitation to the same configured checkout,
+    // not an undisclosed extra discount. Keep the claim aligned with the live offer and do not invent another price.
+    let exitShown = false;
+    function showExitOffer() {
+      let alreadyShown = false;
+      try { alreadyShown = sessionStorage.getItem("kitNutriExitShown") === "1"; } catch (_) {}
+      if (exitShown || alreadyShown) return;
+      exitShown = true;
+      try { sessionStorage.setItem("kitNutriExitShown", "1"); } catch (_) {}
+      openModal('<div class="eyebrow"><span class="dot"></span>Uma última informação</div><h2 id="modalTitle">Leve o Kit Completo com os 5 bônus</h2><p>O kit e os bônus estão reunidos na oferta desta página. Confira as condições atuais antes de decidir.</p><div class="modal-actions"><a class="cta checkout-cta" data-modal-checkout href="#">Quero conferir a oferta</a><button class="modal-secondary" type="button" data-dismiss>Agora não</button></div>');
+      const cta = modalContent.querySelector("[data-modal-checkout]");
+      cta.addEventListener("click", event => {
+        if (!CHECKOUT_URL.trim()) {
+          event.preventDefault();
+          closeModal();
+          showToast("Checkout ainda não configurado. Adicione o endereço em CHECKOUT_URL no script antes de receber pedidos.");
+        } else cta.href = CHECKOUT_URL;
+      });
+      modalContent.querySelector("[data-dismiss]").addEventListener("click", closeModal);
+    }
+    // Exit intent only once per session (desktop pointer leaving viewport; mobile quick upward scroll).
+    document.addEventListener("mouseout", event => { if (event.clientY <= 0 && window.innerWidth > 700) showExitOffer(); });
+    let lastScrollY = window.scrollY;
+    let lastScrollAt = Date.now();
+    window.addEventListener("scroll", () => {
+      const currentY = window.scrollY, now = Date.now();
+      if (window.innerWidth <= 700 && currentY < lastScrollY - 110 && lastScrollY > 460 && now - lastScrollAt < 850) showExitOffer();
+      lastScrollY = currentY;
+      lastScrollAt = now;
+    }, { passive: true });
+
+    // Purchase notifications are intentionally OFF. Enable only when notifications reflect real, verifiable purchases.
+    const ENABLE_PURCHASE_NOTIFICATIONS = false;
+    // Replace with permissioned, accurate information only if the feature is enabled; never simulate orders.
+    const purchaseNotifications = [];
+    if (ENABLE_PURCHASE_NOTIFICATIONS && purchaseNotifications.length) {
+      let index = 0;
+      setInterval(() => {
+        const item = purchaseNotifications[index++ % purchaseNotifications.length];
+        showToast(item);
+      }, 16000);
+    }
+  </script>
+</body>
+</html>

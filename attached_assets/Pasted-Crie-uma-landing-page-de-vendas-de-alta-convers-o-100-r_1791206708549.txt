@@ -1,0 +1,144 @@
+Crie uma landing page de vendas de alta conversão, 100% responsiva (mobile-first, pois o tráfego virá de anúncios no celular), em HTML + CSS + JavaScript puros, em um único index.html, pronta para rodar no Replit como site estático.
+
+## PRODUTO
+Nome: Kit Consultório Nutri
+Título (H2 pequeno acima): "Entre na consulta com o recurso certo na mão"
+Título principal (H1): "+200 modelos para nutricionistas conduzirem atendimentos com mais clareza, agilidade e padrão profissional."
+Público: nutricionistas que atendem em consultório, clínica ou online.
+Formato: kit digital em PDF (editável), acesso imediato e vitalício, com atualizações mensais grátis.
+
+## VARIÁVEIS NO TOPO DO <script> (fáceis de editar)
+CHECKOUT_URL, PRECO_DE (R$ 194,00), PRECO_POR (R$ 37,90), PARCELAS ("6x de R$ 7,45"), PRAZO_HORAS (24), EMAIL_SUPORTE, NOME_PRODUTO. Todos os botões de compra usam CHECKOUT_URL. A economia ("Você economiza R$ X") é calculada em JS.
+
+## DIREÇÃO VISUAL (melhorar em relação à referência)
+- Estilo limpo, moderno, premium e saudável. Muito espaço em branco, cantos arredondados (14–20px), sombras suaves, seções alternando fundo claro e fundo com gradiente sutil.
+- Paleta: verde profundo #14532D (títulos e rodapé), verde vivo #22C55E (detalhes e ícones ✔), creme #F7FAF5 (fundo), branco (cards), laranja #F97316 SOMENTE nos botões de compra (alto contraste, chama atenção). Texto #1F2937.
+- Fontes (Google Fonts): "Poppins" para títulos (700/800) e "Inter" para texto.
+- Botão de compra: grande, largura total no celular, gradiente laranja, sombra, animação de pulso leve e seta →.
+- Elementos decorativos leves: formas orgânicas em verde-claro no fundo do hero, ícones SVG/emoji de frutas e prancheta, sem poluir.
+- Animações: fade-in/slide-up ao rolar (IntersectionObserver), acordeão suave no FAQ, hover nos cards.
+- Imagens via <img> com placeholders em /imagens (com width/height, loading="lazy" e alt), e fundo de fallback caso a imagem não carregue.
+- Performance: nada de bibliotecas pesadas; CSS e JS enxutos.
+
+## ESTRUTURA (mesma ordem da referência, melhorada)
+
+1) BARRA DE URGÊNCIA FIXA NO TOPO
+Texto: "Esta oferta sai do ar em: 00:00:00" (contador regressivo de PRAZO_HORAS, salvo em localStorage; ao zerar, reinicia no próximo acesso).
+
+2) HERO
+- Etiqueta (pill verde-claro): "Para nutricionistas que atendem pacientes"
+- H2: "Entre na consulta com o recurso certo na mão"
+- H1: "+200 modelos para nutricionistas conduzirem atendimentos com mais clareza, agilidade e padrão profissional."
+- Mockup do kit (imagens/mockup-kit.webp) com notebook + tablet + celular mostrando as pastas.
+- 4 selos com ✔ em grid 2x2: "Acesso imediato após a compra" · "Imprime ou envia no WhatsApp" · "Organizado por objetivo do paciente" · "+200 modelos prontos pra usar" · "Novos modelos todo mês, sem custo extra"
+- Botão laranja: "Ver o kit por dentro" (rola até a seção 3)
+- Linha de confiança com ícones: "🛡️ Garantia de 15 dias · 🔒 Pagamento seguro · ⚡ Acesso imediato"
+- MELHORIA: mini prova social logo abaixo do botão: 5 avatares sobrepostos + "⭐⭐⭐⭐⭐ Usado por nutricionistas de todo o Brasil" (texto editável).
+
+3) COMO O KIT FUNCIONA POR DENTRO (id="preview")
+- Título: "Veja como o kit funciona por dentro"
+- Subtítulo: "Você acessa o material, escolhe o objetivo do paciente e encontra modelos prontos para usar na consulta."
+- Player de vídeo com thumbnail e botão de play grande (imagens/thumb-video.webp). Ao clicar, carrega o iframe do Vimeo/YouTube (variável VIDEO_URL).
+- 3 passos numerados em cards: 1 "Escolha o objetivo" · 2 "Veja os modelos disponíveis" · 3 "Use na consulta"
+- Link: "Ver o que outras nutricionistas estão dizendo" (âncora para depoimentos)
+
+4) SE IDENTIFIQUE (dores)
+- Título: "Se você já ficou travada montando a consulta, esse kit é para você"
+- Subtítulo: "Para cada situação real do consultório, inclusive aquelas em que você perde horas sem saber por onde começar."
+- Cards com ícone ❌/⚠️:
+  • O paciente que chega sem entender nada do plano alimentar
+  • A anamnese desorganizada que atrasa toda a consulta
+  • Montar plano alimentar do zero para cada paciente
+  • O paciente que some depois da primeira consulta
+  • Material com cara amadora que não passa autoridade
+  • Não saber o que enviar de orientação depois do atendimento
+
+5) CUSTO DE NÃO AGIR
+- Título: "Cada consulta sem o material certo é valor que você deixa de mostrar"
+- Texto: "O paciente que não entende o plano hoje abandona o acompanhamento amanhã. Você estudou anos para entregar resultado, e sua entrega precisa ter o mesmo padrão. Entre na consulta com estrutura, não na esperança de que dê certo."
+- Botão: "Quero estrutura nas minhas consultas" (âncora para o preço)
+- Selos pequenos: Acesso imediato · Garantia de 15 dias · Pagamento seguro
+
+6) DEPOIMENTOS (id="testimonials")
+- Eyebrow: "O que estão dizendo" · Título: "Nutricionistas que já usam o kit" · Subtítulo: "Quem já usa conta o que mudou."
+- Carrossel com setas e swipe no celular, exibindo imagens de prints (imagens/dep1.webp … dep6.webp). Deixe um comentário no código: "TROCAR por prints reais de clientes".
+- MELHORIA: lightbox para ampliar o print ao tocar.
+- Frase de transição: "Agora veja exatamente tudo que está incluído no Kit Completo."
+
+7) O QUE EU RECEBO
+- Eyebrow "O que eu recebo" · Título "Tudo o que você vai receber"
+- Card grande do kit com mockup e lista ✔:
+  • Anamneses e avaliações nutricionais completas (anamnese, recordatório 24h, frequência alimentar, antropometria)
+  • Planos alimentares prontos e editáveis por objetivo (emagrecimento, hipertrofia, reeducação, gestantes, esportistas, vegetarianos)
+  • Cardápios semanais e listas de substituição
+  • Listas de compras e guias de mercado
+  • Materiais de educação alimentar para entregar ao paciente
+  • Receitas práticas ilustradas
+  • Orientações pré e pós-consulta
+  • Atualizações mensais com novos modelos, sem pagar nada a mais
+  • Todos em PDF editável, com espaço para sua logo e seus dados
+
+8) 5 BÔNUS EXCLUSIVOS (cards com mockup, etiqueta "GRÁTIS" e valor riscado)
+  1. Scripts de WhatsApp para agendamento, retorno e fidelização — de R$ 27,00 GRÁTIS
+  2. Contrato e Termo de Consentimento para atendimento nutricional — de R$ 19,00 GRÁTIS
+  3. Checklist de Planejamento de Consulta — de R$ 17,00 GRÁTIS
+  4. Guia: como apresentar seus honorários e reter pacientes — de R$ 17,00 GRÁTIS
+  5. Pack de 30 artes editáveis para Instagram de nutricionista — de R$ 17,00 GRÁTIS
+Texto de abertura: "E não para por aí. No kit completo, você ainda recebe 5 bônus que resolvem as maiores dores do dia a dia clínico."
+
+9) ANCORAGEM DE PREÇO
+- Eyebrow: "Veja quanto tudo isso custaria separado"
+- Título: "Mais de 250 materiais por menos do que você pagaria em um único material avulso"
+- Tabela "O que você recebe | Valor separado":
+  +200 modelos para nutricionistas R$ 97,00 · Bônus 1 R$ 27,00 · Bônus 2 R$ 19,00 · Bônus 3 R$ 17,00 · Bônus 4 R$ 17,00 · Bônus 5 R$ 17,00
+- Linha de total em destaque: "Você pagaria: R$ 194,00" (soma automática)
+- Texto: "Mas hoje você pode garantir o Kit Completo com uma condição especial disponível nesta página."
+
+10) CARD DE OFERTA (id="pricing")
+- Faixa: "OFERTA VÁLIDA ATÉ: 00:00:00" (mesmo contador)
+- Título: "Kit Consultório Nutri Completo" + mockup
+- "De R$ 194,00" riscado → "R$ 37,90" em fonte gigante → "ou 6x de R$ 7,45" → "pagamento único • acesso imediato"
+- Selo verde: "Você economiza R$ 156,10"
+- Lista com ✔: +200 modelos · Organizados por objetivo · Biblioteca digital com busca e filtros · Acesso vitalício + atualizações · 5 bônus (com valor de cada um)
+- Botão laranja gigante: "QUERO O KIT COMPLETO" + microtexto "Acesso imediato por e-mail"
+- Ícones de formas de pagamento (Cartão, Pix, Boleto) + "🔒 Compra 100% segura"
+- MELHORIA: logo abaixo do botão, mini garantia "15 dias de garantia incondicional".
+
+11) GARANTIA
+Selo circular "15 DIAS" + título "Compra sem risco" + texto: "Você tem 15 dias para usar o kit e ver na prática o que ele faz pela sua consulta. Se por qualquer motivo não ficar satisfeita, é só pedir o reembolso, sem burocracia. O risco é todo nosso. O resultado é todo seu."
+
+12) FAQ (acordeão)
+  • Como acesso o material depois da compra? (e-mail com link de acesso imediato)
+  • Em qual formato vem o kit? (PDFs organizados em pastas por categoria)
+  • Posso editar e colocar minha logo? (sim, nos modelos editáveis)
+  • Posso imprimir quantas vezes quiser? (sim, uso pessoal no consultório)
+  • Preciso de experiência para usar? (não, os modelos são prontos)
+  • Serve para atendimento online? (sim, é só enviar por WhatsApp/e-mail ou compartilhar a tela)
+  • Como funciona a garantia? (15 dias, reembolso integral pela plataforma de pagamento)
+  • O pagamento é seguro? (sim, plataforma de pagamento segura; Cartão, Pix e Boleto)
+Link no fim: botão "Quero meu kit agora".
+
+13) CTA FINAL
+Título: "Sua próxima consulta pode ter outro padrão" + botão laranja "Quero meu kit agora".
+
+14) RODAPÉ (fundo verde escuro)
+"© 2026 Kit Consultório Nutri. Todos os direitos reservados." + aviso: "Este é um material digital de apoio e organização para nutricionistas. Não substitui a avaliação individualizada do profissional nem a prescrição dietética. Os resultados podem variar." + links Termos, Privacidade, Contato (EMAIL_SUPORTE).
+
+15) POP-UP DE SAÍDA (uma vez por sessão)
+Desktop: exit-intent. Celular: ao rolar rápido para cima ou ao tentar voltar. Conteúdo: tag "Oferta especial", "Espera! Temos uma oferta exclusiva pra você", texto sobre levar o Kit Completo com os 5 bônus, mockup, botões "Quero o kit completo com desconto" e link discreto "Continuar sem o desconto".
+
+## MELHORIAS DE CONVERSÃO (implementar)
+- Botão fixo de compra no rodapé do celular ("Quero o kit · R$ 37,90"), que aparece após o hero e some quando a seção de preço está visível.
+- CTAs repetidos após cada bloco importante (dores, depoimentos, bônus, preço, FAQ).
+- Rolagem suave nas âncoras e barra de progresso fina no topo.
+- Contagem de números animada em "+200 modelos" ao entrar na tela.
+- Cores de contraste AA, botões com área de toque mínima de 48px.
+- SEO e Open Graph (title, description, og:image), lang="pt-BR", favicon.
+- Campos comentados para colar Pixel do Meta e Google Tag.
+- Não incluir notificações falsas de compra nem números de vendas inventados.
+
+## TOM DE VOZ
+Português do Brasil, direto, acolhedor e profissional. Frases curtas, foco em benefícios (tempo, padrão, segurança, autoridade). Sem promessa de resultado clínico ou financeiro garantido.
+
+## ENTREGA
+Gere o index.html completo, com CSS e JS embutidos, e a lista dos arquivos esperados em /imagens (mockup-kit.webp, thumb-video.webp, bonus1.webp … bonus5.webp, dep1.webp … dep6.webp). No início do arquivo, adicione um comentário explicando onde trocar checkout, preços, prazo, vídeo, depoimentos e imagens.
